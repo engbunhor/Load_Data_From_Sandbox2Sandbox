@@ -1,0 +1,35 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>   
+    <bean id="exportAccounts"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>exportAccounts gets all accounts as a CSV file from Salesforce."</description>
+        <property name="name" value="exportAccounts"/>
+        <property name="configOverrideMap">
+            <map> 
+                <entry key="sfdc.entity" value="Account"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, Name FROM Account"/>
+                <entry key="process.operation" value="extract"/> 
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="SandboxA\ExportedCSV\Accounts.csv"/>
+            </map>
+        </property>
+    </bean>
+	<bean id="exportOpportunities"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>exportOpportunities gets all exportOpportunities as a CSV file from Salesforce."</description>
+        <property name="name" value="exportOpportunities"/>
+        <property name="configOverrideMap">
+            <map> 
+                <entry key="sfdc.entity" value="Opportunity"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, Name FROM Opportunity"/>
+                <entry key="process.operation" value="extract"/> 
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="SandboxA\ExportedCSV\Opportunities.csv"/>
+            </map>
+        </property>
+    </bean>
+</beans>

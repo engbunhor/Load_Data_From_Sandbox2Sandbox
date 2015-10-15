@@ -1,0 +1,4 @@
+*.csv
+SandboxA/XmlConf/exportAccounts_lastRun.properties
+SandboxA/XmlConf/exportOpportunities_lastRun.properties
+SandboxA/XmlConf/config.properties

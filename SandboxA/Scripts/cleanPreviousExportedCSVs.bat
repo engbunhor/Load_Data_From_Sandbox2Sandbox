@@ -1,0 +1,1 @@
+del %ROOT_PATH%\SandboxA\ExportedCSV\*.csv
