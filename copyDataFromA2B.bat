@@ -15,6 +15,6 @@ ECHO ============= CLEANING PREVIOUS EXPORTED CSVs ENDED====================
 ECHO =========================== START EXPORTING ===========================
 CALL "%SANDBOX_A_SCRIPTS%\exportAll.bat"
 ECHO =========================== START EXPORTING ENDED ==============================
-
+aaaaa
 
 PAUSE
