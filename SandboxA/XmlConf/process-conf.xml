@@ -3,7 +3,7 @@
     <bean id="exportAccounts"
           class="com.salesforce.dataloader.process.ProcessRunner"
           singleton="false">
-      <description>exportAccounts gets all accounts as a CSV file from Salesforce."</description>
+      <description>exportAccounts gets all accounts as a CSV file from Salesforce....."</description>
         <property name="name" value="exportAccounts"/>
         <property name="configOverrideMap">
             <map> 
